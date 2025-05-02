@@ -1,13 +1,14 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Firewall Simulator</title>
+    <title>Firewall Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Network Firewall Simulator</h1>
+    <h1>Firewall Simulator</h1>
     <form id="packet-form">
         <label for="ip">IP Address:</label>
         <input type="text" id="ip" name="ip" required><br><br>
@@ -16,32 +17,16 @@
         <input type="number" id="port" name="port" required><br><br>
 
         <label for="protocol">Protocol:</label>
-        <input type="text" id="protocol" name="protocol" required><br><br>
+        <select id="protocol" name="protocol" required>
+            <option value="TCP">TCP</option>
+            <option value="UDP">UDP</option>
+        </select><br><br>
 
         <button type="submit">Submit Packet</button>
     </form>
 
-    <div id="result"></div>
+    <div id="response"></div>
 
-    <script>
-        document.getElementById('packet-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const packet = {
-                ip: document.getElementById('ip').value,
-                port: document.getElementById('port').value,
-                protocol: document.getElementById('protocol').value,
-            };
-
-            const res = await fetch('/packet', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(packet),
-            });
-
-            const result = await res.json();
-            document.getElementById('result').innerText = `Packet ${result.allowed ? 'allowed' : 'blocked'}: ${result.reason}`;
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
