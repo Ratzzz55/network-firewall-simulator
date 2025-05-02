@@ -1,8 +1,7 @@
-# network-firewall-simulator
+network-firewall-simulator
 JavaScript-based firewall simulator for network traffic filtering and cybersecurity learning.
----
 
-## 🚀 Features
+🚀 Features
 
 - 🔐 Rule-based packet filtering (by IP, port, and protocol)
 - 📊 Real-time request logging
@@ -10,17 +9,13 @@ JavaScript-based firewall simulator for network traffic filtering and cybersecur
 - 🧩 Simple interface for testing packet inputs
 - 🖥️ Built with JavaScript and Node.js
 
----
-
-## 🧠 Learning Objectives
+🧠 Learning Objectives
 
 - Understanding how firewalls handle data packets
 - Simulating packet filtering and rule matching
 - Exploring basic cybersecurity logic in a controlled environment
 
----
-
-## 🛠 Tech Stack
+🛠 Tech Stack
 
 - JavaScript
 - Node.js
@@ -28,11 +23,9 @@ JavaScript-based firewall simulator for network traffic filtering and cybersecur
 - HTML/CSS (for basic UI)
 - Console-based logging (can be extended)
 
----
+🧪 How to Run
 
-## 🧪 How to Run
-
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/Ratzzz55/network-firewall-simulator.git
